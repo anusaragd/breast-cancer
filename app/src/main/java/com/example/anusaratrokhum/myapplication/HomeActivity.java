@@ -14,6 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.anusaratrokhum.myapplication.alert.AlertActivity;
+
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -82,7 +84,7 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.about) {
-            Intent intent = new Intent(getApplicationContext(), ItemaboutListActivity.class);
+            Intent intent = new Intent(getApplicationContext(), com.example.anusaratrokhum.myapplication.ItemaboutListActivity.class);
             startActivity(intent);
             // Handle the camera action
         } else if (id == R.id.questionnaire) {
@@ -94,7 +96,7 @@ public class HomeActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.alarm) {
-            Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+            Intent intent = new Intent(getApplicationContext(), AlertActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.gps) {
