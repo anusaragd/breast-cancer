@@ -15,7 +15,6 @@
         android:layout_height="match_parent"
         android:text="REGISTER"
         android:textSize="30dp"
-        android:textColor=""
         style="@style/Base.TextAppearance.AppCompat.Body1"
         />
     <EditText android:layout_height="wrap_content"

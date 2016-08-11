@@ -12,4 +12,28 @@
     tools:context="com.example.anusaratrokhum.myapplication.HomeActivity"
     tools:showIn="@layout/app_bar_home">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:text="เกี่ยวกับโรคมะเร็งเต้านม"
+        style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:textSize="30dp"
+        android:id="@+id/textView3" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/open"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="103dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="มะเร็งเต้านมเป็นมะเร็งที่พบมากที่สุดในผู้หญิง จากสถิติของสถาบันมะเร็งแห่งชาติพบผู้หญิงเป็นมะเร็งเต้านมร้อยละ 37 ของมะเร็งทั้งหมด และยังมีอัตราการเสียชีวิตเป็นอันดับสองรองจากมะเร็งปอด ดังนั้นการดูแลตัวเองเพื่อลดความเสี่ยงของการเกิดมะเร็ง และการค้นพบมะเร็งตั้งแต่ระยะเริ่มแรกในขณะที่ก้อนมีขนาดเล็ก และก้อนมะเร็งยังอยู่เฉพาะที่เต้านม ยังไม่แพร่กระจายไปต่อมน้ำเหลือง จึงเป็นเรื่องสำคัญ เพราะ จะมีโอกาสหายขาดมากขึ้น เมื่อเทียบกับการตรวจพบก้อน มะเร็งที่มีขนาดใหญ่ หรือกระจายไปต่อมน้ำเหลืองที่รักแร้แล้ว โดยหากมีการตรวจพบมะเร็งเต้านมในระยะเริ่มต้น มีโอกาสที่จะมีชีวิตเกิน 5 ปีถึงร้อยละ 98 ถ้าตรวจเจอ ตอนก้อนมะเร็งกระจายไปที่ต่อมน้ำเหลืองที่รักแร้แล้ว มีโอกาสที่จะมีชีวิตเกิน 5 ปีร้อยละ 84 และถ้าตรวจเจอ ตอนมะเร็งแพร่กระจายไปแล้ว โอกาสที่จะมีชีวิตเกิน 5 ปี มีเพียงร้อยละ 23 และยังไม่แพร่กระจายจะทำให้มีโอกาศรอดชีวิตสูง ก้อนขนาดเล็กก่อนที่จะรู้เรื่องมะเร็งท่านต้องทราบ"
+        android:paddingTop="280dp"/>
+
 </RelativeLayout>
