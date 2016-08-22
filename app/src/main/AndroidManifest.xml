@@ -40,7 +40,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.anusaratrokhum.myapplication.ItemaboutListActivity" />
         </activity>
-        <activity android:name=".alert.AlertActivity"></activity>
+        <activity android:name=".alert.AlertActivity" />
+        <activity android:name=".postsActivity"></activity>
     </application>
 
 </manifest>

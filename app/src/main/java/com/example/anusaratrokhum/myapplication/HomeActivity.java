@@ -104,7 +104,7 @@ public class HomeActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.Posts) {
-            Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+            Intent intent = new Intent(getApplicationContext(), postsActivity.class);
             startActivity(intent);
 
         }else if (id == R.id.touch) {
