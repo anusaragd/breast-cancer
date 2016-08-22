@@ -41,7 +41,8 @@
                 android:value="com.example.anusaratrokhum.myapplication.ItemaboutListActivity" />
         </activity>
         <activity android:name=".alert.AlertActivity" />
-        <activity android:name=".postsActivity"></activity>
+        <activity android:name=".postsActivity" />
+        <activity android:name=".commentActivity"></activity>
     </application>
 
 </manifest>
