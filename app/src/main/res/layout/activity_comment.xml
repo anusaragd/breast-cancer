@@ -7,6 +7,39 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.anusaratrokhum.myapplication.commentActivity">
+    tools:context="com.example.anusaratrokhum.myapplication.commentActivity"
+    android:contextClickable="false">
+
+
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:textSize="20dp"
+        android:id="@+id/textView8"
+        android:background="#F8BBD0"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+    <Button
+        android:layout_alignParentTop="true"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginRight="40dp"
+        android:text="submit"
+        />
+        <Button
+            android:layout_alignParentTop="true"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="280dp"
+            android:text="cancle"
+            />
+    </LinearLayout>
 
 </RelativeLayout>
