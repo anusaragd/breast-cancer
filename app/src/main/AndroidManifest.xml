@@ -43,7 +43,9 @@
         <activity android:name=".alert.AlertActivity" />
         <activity android:name=".postsActivity" />
         <activity android:name=".commentActivity" />
-        <activity android:name=".Posts.posts1Activity"></activity>
+        <activity android:name=".Posts.posts1Activity" />
+        <activity android:name=".Posts.posts2Activity" />
+        <activity android:name=".alert.alert1Activity"></activity>
     </application>
 
 </manifest>
