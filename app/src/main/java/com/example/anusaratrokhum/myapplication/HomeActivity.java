@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.anusaratrokhum.myapplication.Posts.postsActivity;
 import com.example.anusaratrokhum.myapplication.alert.AlertActivity;
 
 public class HomeActivity extends AppCompatActivity
@@ -103,22 +104,24 @@ public class HomeActivity extends AppCompatActivity
             Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.Posts) {
-            Intent intent = new Intent(getApplicationContext(), com.example.anusaratrokhum.myapplication.postsActivity.class);
-            startActivity(intent);
+        } else {
+            if (id == R.id.Posts) {
+                Intent intent = new Intent(getApplicationContext(),postsActivity.class);
+                startActivity(intent);
 
-        }else if (id == R.id.touch) {
-            Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
-            startActivity(intent);
+            } else if (id == R.id.touch) {
+                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(intent);
 
-        }else if (id == R.id.help) {
-            Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
-            startActivity(intent);
+            } else if (id == R.id.help) {
+                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(intent);
 
-        } else if (id == R.id.nav_send) {
-            Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
-            startActivity(intent);
+            } else if (id == R.id.nav_send) {
+                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(intent);
 
+            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

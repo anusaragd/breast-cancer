@@ -25,7 +25,8 @@
             android:text="ตั้งกระทู้ของคุณ"
             android:gravity="center|fill"
             android:textSize="20dp"
-            android:textColor="#FFF"/>
+            android:textColor="#FFF"
+            android:id="@+id/addposts"/>
     </LinearLayout>
 
     <TextView
