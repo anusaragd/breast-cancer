@@ -35,14 +35,15 @@
             android:name=".About.ItemaboutDetailActivity"
             android:label="@string/title_itemabout_detail"
             android:parentActivityName=".About.ItemaboutListActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".alert.AlertActivity" />
         <activity android:name=".Posts.postsActivity" />
         <activity android:name=".commentActivity" />
         <activity android:name=".Posts.posts1Activity" />
         <activity android:name=".Posts.posts2Activity" />
         <activity android:name=".alert.alert1Activity" />
-        <activity android:name=".Touch.touchActivity"></activity>
+        <activity android:name=".Touch.touchActivity" />
+        <activity android:name=".Test.testActivity"></activity>
     </application>
 
 </manifest>
