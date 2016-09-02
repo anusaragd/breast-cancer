@@ -28,24 +28,21 @@
             android:name=".GuestActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ItemaboutListActivity"
+            android:name=".About.ItemaboutListActivity"
             android:label="@string/title_itemabout_list"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ItemaboutDetailActivity"
+            android:name=".About.ItemaboutDetailActivity"
             android:label="@string/title_itemabout_detail"
-            android:parentActivityName=".ItemaboutListActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.anusaratrokhum.myapplication.ItemaboutListActivity" />
-        </activity>
+            android:parentActivityName=".About.ItemaboutListActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".alert.AlertActivity" />
-        <activity android:name=".postsActivity" />
+        <activity android:name=".Posts.postsActivity" />
         <activity android:name=".commentActivity" />
         <activity android:name=".Posts.posts1Activity" />
         <activity android:name=".Posts.posts2Activity" />
-        <activity android:name=".alert.alert1Activity"></activity>
+        <activity android:name=".alert.alert1Activity" />
+        <activity android:name=".Touch.touchActivity"></activity>
     </application>
 
 </manifest>

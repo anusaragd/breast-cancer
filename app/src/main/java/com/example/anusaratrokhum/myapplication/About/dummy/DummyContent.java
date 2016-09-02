@@ -1,4 +1,4 @@
-package com.example.anusaratrokhum.myapplication.dummy;
+package com.example.anusaratrokhum.myapplication.About.dummy;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.example.anusaratrokhum.myapplication;
+package com.example.anusaratrokhum.myapplication.About;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,7 +16,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.example.anusaratrokhum.myapplication.dummy.DummyContent;
+import com.example.anusaratrokhum.myapplication.R;
+import com.example.anusaratrokhum.myapplication.About.dummy.DummyContent;
 
 import java.util.List;
 

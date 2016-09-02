@@ -1,4 +1,4 @@
-package com.example.anusaratrokhum.myapplication;
+package com.example.anusaratrokhum.myapplication.About;
 
 import android.app.Activity;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.anusaratrokhum.myapplication.dummy.DummyContent;
+import com.example.anusaratrokhum.myapplication.About.dummy.DummyContent;
+import com.example.anusaratrokhum.myapplication.R;
+
 
 /**
  * A fragment representing a single Itemabout detail screen.
