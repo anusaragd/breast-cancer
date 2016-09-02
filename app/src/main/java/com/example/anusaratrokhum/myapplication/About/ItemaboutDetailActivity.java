@@ -12,8 +12,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 
-import com.example.anusaratrokhum.myapplication.ItemaboutDetailFragment;
-import com.example.anusaratrokhum.myapplication.ItemaboutListActivity;
+import com.example.anusaratrokhum.myapplication.About.ItemaboutDetailFragment;
+import com.example.anusaratrokhum.myapplication.About.ItemaboutListActivity;
 import com.example.anusaratrokhum.myapplication.R;
 
 /**
