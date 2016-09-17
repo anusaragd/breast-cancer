@@ -110,6 +110,7 @@
         android:textColor="#FFFFFF"
         android:textSize="20dp"
         android:padding="@dimen/activity_vertical_margin"
+        android:id="@+id/sumtext"
         android:background="#EF5350"/>
 
     <TextView

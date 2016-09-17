@@ -11,9 +11,11 @@ import okhttp3.RequestBody;
  * Created by anusara on 15-Sep-16.
  */
 public class JSONObtained {
-    public static final String BASE_URL = "http://192.168.1.35/breast-cancer/";
+//    public static final String BASE_URL = "http://192.168.1.35/breast-cancer/";
 //    public static final String BASE_URL = "http://192.168.1.33/breast-cancer/";
 //    public static final String BASE_URL = "http://192.168.1.44/breast-cancer/";
+    public static final String BASE_URL = "http://172.19.145.41/breast-cancer/";
+
     private static OkHttpClient client = null;
 
     public static OkHttpClient getInstance() {

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import okhttp3.RequestBody;
@@ -13,6 +14,7 @@ import okhttp3.RequestBody;
 public class RegisterActivity extends AppCompatActivity {
 
     private Spinner daySpinner, monthSpinner, yearSpinner;
+    private EditText Age;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
         final Button cancel = (Button) findViewById(R.id.canbutt);
         cancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (v.getId() == R.id.subbutt) {
+                if (v.getId() == R.id.canbutt) {
                     Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
                     startActivity(intent);
                     //Intent intent = new Intent(getApplicationContext(), homeActivity.class);
@@ -64,5 +66,18 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+        birthday();
+
     }
+
+    private void birthday() {
+
+        Age = (EditText) findViewById(R.id.sumtext);
+
+//        for(int i = 0; i>; i++){
+//
+//        }
+    }
+
+
 }
