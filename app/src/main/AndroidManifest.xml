@@ -48,6 +48,7 @@
         <activity android:name=".alert.alert1Activity" />
         <activity android:name=".Touch.touchActivity" />
         <activity android:name=".Test.testActivity" />
+        <activity android:name=".alert.AlertsetActivity"></activity>
     </application>
 
 </manifest>
