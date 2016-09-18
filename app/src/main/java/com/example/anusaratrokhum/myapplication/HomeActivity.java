@@ -16,6 +16,7 @@ import android.view.MenuItem;
 
 import com.example.anusaratrokhum.myapplication.About.ItemaboutListActivity;
 import com.example.anusaratrokhum.myapplication.Posts.postsActivity;
+import com.example.anusaratrokhum.myapplication.Questionnaire.QuestionnaireActivity;
 import com.example.anusaratrokhum.myapplication.Test.testActivity;
 import com.example.anusaratrokhum.myapplication.Touch.touchActivity;
 import com.example.anusaratrokhum.myapplication.alert.AlertActivity;
@@ -92,7 +93,7 @@ public class HomeActivity extends AppCompatActivity
             startActivity(intent);
             // Handle the camera action
         } else if (id == R.id.questionnaire) {
-            Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+            Intent intent = new Intent(getApplicationContext(), QuestionnaireActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.test) {
