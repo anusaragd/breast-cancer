@@ -16,6 +16,7 @@ import android.view.MenuItem;
 
 import com.example.anusaratrokhum.myapplication.About.ItemaboutListActivity;
 import com.example.anusaratrokhum.myapplication.Posts.postsActivity;
+import com.example.anusaratrokhum.myapplication.Test.testActivity;
 import com.example.anusaratrokhum.myapplication.Touch.touchActivity;
 import com.example.anusaratrokhum.myapplication.alert.AlertActivity;
 
@@ -95,7 +96,7 @@ public class HomeActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.test) {
-            Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+            Intent intent = new Intent(getApplicationContext(), testActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.alarm) {

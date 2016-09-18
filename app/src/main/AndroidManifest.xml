@@ -48,7 +48,13 @@
         <activity android:name=".alert.alert1Activity" />
         <activity android:name=".Touch.touchActivity" />
         <activity android:name=".Test.testActivity" />
-        <activity android:name=".alert.AlertsetActivity"></activity>
+        <activity android:name=".alert.AlertsetActivity" />
+        <activity android:name=".Test.test1Activity" />
+        <activity android:name=".Test.test2Activity" />
+        <activity android:name=".Test.test3Activity" />
+        <activity android:name=".Test.test4Activity" />
+        <activity android:name=".Test.test5Activity" />
+        <activity android:name=".Test.test6Activity"></activity>
     </application>
 
 </manifest>

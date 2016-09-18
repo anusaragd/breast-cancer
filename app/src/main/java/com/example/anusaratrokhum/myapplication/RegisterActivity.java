@@ -70,6 +70,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+
+
     private void birthday() {
 
         Age = (EditText) findViewById(R.id.sumtext);
