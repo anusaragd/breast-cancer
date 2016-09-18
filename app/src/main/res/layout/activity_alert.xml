@@ -9,11 +9,30 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.anusaratrokhum.myapplication.alert.AlertActivity">
 
-    <ImageButton
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/ic_alarm"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:id="@+id/imageButton"/>
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.example.anusaratrokhum.myapplication.alert.PlusOneFragment"
+        android:id="@+id/fragment"
+        android:layout_alignBottom="@+id/imageButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>
+
+
+<!--<ImageButton-->
+<!--android:layout_width="200dp"-->
+<!--android:layout_height="200dp"-->
+<!--android:layout_centerVertical="true"-->
+<!--android:layout_centerHorizontal="true"-->
+<!--android:background="@drawable/ic_alarm"-->
+<!--android:id="@+id/imageButton" />-->
