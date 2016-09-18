@@ -54,7 +54,8 @@
         <activity android:name=".Test.test3Activity" />
         <activity android:name=".Test.test4Activity" />
         <activity android:name=".Test.test5Activity" />
-        <activity android:name=".Test.test6Activity"></activity>
+        <activity android:name=".Test.test6Activity" />
+        <activity android:name=".Test.testsumActivity"></activity>
     </application>
 
 </manifest>

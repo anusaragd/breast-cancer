@@ -20,6 +20,7 @@
         android:textSize="20dp"
         android:textColor="#FFFFFF"
         android:background="#FF5252"
+        android:id="@+id/startbutt"
         />
 
 
