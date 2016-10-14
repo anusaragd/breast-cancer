@@ -14,8 +14,10 @@ public class JSONObtained {
 //    public static final String BASE_URL = "http://192.168.1.35/breast-cancer/";
 //    public static final String BASE_URL = "http://192.168.1.33/breast-cancer/";
 //    public static final String BASE_URL = "http://192.168.1.44/breast-cancer/";
-    public static final String BASE_URL = "http://192.168.1.37/breast-cancer/";
+//    public static final String BASE_URL = "http://192.168.1.37/breast-cancer/";
 //    public static final String BASE_URL = "http://172.19.145.41/breast-cancer/";
+    public static final String BASE_URL = "http://192.168.43.180/breast-cancer/";
+//    public static final String BASE_URL = "http://172.19.245.180/breast-cancer/";
 
     private static OkHttpClient client = null;
 
