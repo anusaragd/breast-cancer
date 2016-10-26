@@ -15,11 +15,11 @@
         <activity
             android:name=".splashscreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity
             android:name=".MainActivity"
@@ -49,7 +49,13 @@
         <activity android:name=".Touch.touchActivity" />
         <activity android:name=".Test.testActivity" />
         <activity android:name=".alert.AlertsetActivity" />
-        <activity android:name=".Test.test1Activity" />
+        <activity android:name=".Test.test1Activity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+       </activity>
         <activity android:name=".Test.test2Activity" />
         <activity android:name=".Test.test3Activity" />
         <activity android:name=".Test.test4Activity" />
