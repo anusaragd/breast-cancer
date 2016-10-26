@@ -16,6 +16,7 @@ public class test1Activity extends AppCompatActivity {
     RadioButton myOption1, myOption2, myOption3;
     Button btn1;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,16 +29,29 @@ public class test1Activity extends AppCompatActivity {
         btn1 = (Button) findViewById(R.id.nextbutton);
         btn1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Toast.makeText(test1Activity.this,
-                        "RadioButton 1 : " + myOption1.isChecked() + "\n"+
-                                "RadioButton 2 : " + myOption2.isChecked() + "\n" +
-                                "RadioButton 3 : " + myOption3.isChecked(),
-                        Toast.LENGTH_LONG).show();
+                if (v.getId() == R.id.nextbutton) {
+                    Intent intent = new Intent(getApplicationContext(), test2Activity.class);
+                    startActivity(intent);
+
+                }
+
             }
         });
-
-    };
+    }
+//        btn1.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//
+//
+//                // TODO Auto-generated method stub
+//                Toast.makeText(test1Activity.this,
+//                        "RadioButton 1 : " + myOption1.isChecked() + "\n"+
+//                                "RadioButton 2 : " + myOption2.isChecked() + "\n" +
+//                                "RadioButton 3 : " + myOption3.isChecked(),
+//                        Toast.LENGTH_LONG).show();
+//            }
+//        });
+//
+//    };
 
 
 //
@@ -67,16 +81,4 @@ public class test1Activity extends AppCompatActivity {
 
 
 
-//    final Button nextbutton = (Button) findViewById(R.id.nextbutton);
-//        nextbutton.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                if (v.getId() == R.id.nextbutton) {
-//                    Intent intent = new Intent(getApplicationContext(), test2Activity.class);
-//                    startActivity(intent);
-//
-//                }
-//
-//            }
-//        });
-//    }
 }
