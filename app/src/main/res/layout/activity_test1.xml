@@ -15,12 +15,20 @@
         android:src="@drawable/t1"
         android:id="@+id/imageView2" />
 
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="220dp" >
+
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ปกติ"
-        android:id="@+id/radioButton"
-        android:layout_below="@+id/imageView2"
+        android:id="@+id/radio1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="47dp" />
@@ -29,8 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ผิดปกติ"
-        android:id="@+id/radioButton2"
-        android:layout_below="@+id/radioButton"
+        android:id="@+id/radio2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="24dp" />
@@ -39,11 +46,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ไม่แน่ใจ"
-        android:id="@+id/radioButton3"
+        android:id="@+id/radio3"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/radioButton2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    </RadioGroup>
 
     <Button
         android:layout_width="250dp"
@@ -53,7 +61,7 @@
         android:textColor="#FFFFFF"
         android:background="#FF5252"
         android:id="@+id/nextbutton"
-        android:layout_below="@+id/radioButton3"
+        android:layout_below="@+id/radioGroup1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp" />
 
