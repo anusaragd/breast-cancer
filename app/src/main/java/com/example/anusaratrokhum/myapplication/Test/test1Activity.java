@@ -48,13 +48,13 @@ public class test1Activity extends AppCompatActivity {
     }
     public void Condition(){
         if(myOption1.isChecked()){
-            sum1 = 1;
+            sum1 = 0;
         }
         if(myOption2.isChecked()){
             sum1 = 2;
         }
         if(myOption3.isChecked()){
-            sum1 = 3;
+            sum1 = 1;
         }
         ans = String.valueOf(sum1);
 //        Toast.makeText(getApplicationContext(),ans,Toast.LENGTH_LONG).show();
