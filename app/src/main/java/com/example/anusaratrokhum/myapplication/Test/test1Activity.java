@@ -37,6 +37,7 @@ public class test1Activity extends AppCompatActivity {
                 Condition(); // กำหนดค่าของปุ่ม
                 if (v.getId() == R.id.nextbutton) {
                     Intent intent = new Intent(getApplicationContext(), test2Activity.class);
+                    intent.putExtra("sum1", sum1);
                     startActivity(intent);
 
                 }
@@ -56,8 +57,9 @@ public class test1Activity extends AppCompatActivity {
         if(myOption3.isChecked()){
             sum1 = 1;
         }
-        ans = String.valueOf(sum1);
-//        Toast.makeText(getApplicationContext(),ans,Toast.LENGTH_LONG).show();
+
+//        ans = String.valueOf(sum1);
+        Toast.makeText(getApplicationContext(),sum1 + "",Toast.LENGTH_LONG).show();
 
     }
 
