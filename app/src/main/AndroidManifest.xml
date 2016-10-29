@@ -50,11 +50,7 @@
         <activity android:name=".Test.testActivity" />
         <activity android:name=".alert.AlertsetActivity" />
         <activity android:name=".Test.test1Activity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
        </activity>
         <activity android:name=".Test.test2Activity" />
@@ -64,6 +60,11 @@
         <activity android:name=".Test.test6Activity" />
         <activity android:name=".Test.testsumActivity" />
         <activity android:name=".Questionnaire.QuestionnaireActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
     </activity>
         <activity android:name=".Questionnaire.AnswerQuestionnaireActivity"></activity>
