@@ -12,14 +12,18 @@ import com.example.anusaratrokhum.myapplication.R;
 
 import java.io.IOException;
 
+import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class testsumActivity extends AppCompatActivity {
 
     TextView textShow, txtResult;
     int sum1,sum2,sum3,sum4,sum5,sum6; //คำตอบ
+
+    String para;
 
 
 
@@ -49,7 +53,7 @@ public class testsumActivity extends AppCompatActivity {
         getHttp http = new getHttp();
         String response = null;
         try {
-            response = http.run("http://192.168.1.2/getString.php");
+            response = http.run("http://192.168.1.2/breast-cancer/getString.php");
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -60,8 +64,14 @@ public class testsumActivity extends AppCompatActivity {
     public class getHttp {
         OkHttpClient client = new OkHttpClient();
 
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("r_id", para)
+                .build();
+
         String run(String url) throws IOException {
             Request request = new Request.Builder()
+                    .post(requestBody)
                     .url(url)
                     .build();
             Response response = client.newCall(request).execute();
@@ -74,12 +84,15 @@ public class testsumActivity extends AppCompatActivity {
 
         if ((a == 0) || (a == 1) || (a == 2) || (a == 3) || (a == 4)) {
             ANS = "เป็นปกติ";
+            para = "000001";
         }
         if ((a == 5) || (a == 6) || (a == 7) || (a == 8)) {
             ANS = "เสี่ยงต่อการเป็นมะเร็งเต้านม";
+            para = "000002";
         }
         if ((a == 9) || (a == 10) || (a == 11) || (a == 12)) {
             ANS = "ตรวจพบว่าคุณเป็นมะเร็งเต้านม";
+            para = "000003";
         }
 
         Toast.makeText(getApplicationContext(),a + "",Toast.LENGTH_LONG).show();

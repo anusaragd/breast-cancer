@@ -176,14 +176,15 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
 
-        String url = "http://192.168.1.2/register2.php";
-//
+        String url = "http://192.168.1.2/breast-cancer/register2.php";
+
 //        List<NameValuePair> params = new ArrayList<NameValuePair>();
 //        params.add(new BasicNameValuePair("sUsername", txtUsername.getText().toString()));
 //        params.add(new BasicNameValuePair("sPassword", txtPassword.getText().toString()));
 //        params.add(new BasicNameValuePair("sName", txtName.getText().toString()));
 //        params.add(new BasicNameValuePair("sEmail", txtEmail.getText().toString()));
-//        params.add(new BasicNameValuePair("sTel", txtTel.getText().toString()));
+//        params.add(new BasicNameValuePair("slastName", txtEmail.getText().toString()));
+
 
         /** Get result from Server (Return the JSON Code)
          * StatusID = ? [0=Failed,1=Complete]

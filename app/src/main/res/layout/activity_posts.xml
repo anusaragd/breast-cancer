@@ -9,72 +9,28 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.anusaratrokhum.myapplication.Posts.postsActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:background="#FF5252">
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@android:drawable/ic_input_add"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="ตั้งกระทู้ของคุณ"
-            android:gravity="center|fill"
-            android:textSize="20dp"
-            android:textColor="#FFF"
-            android:id="@+id/addposts"/>
-    </LinearLayout>
 
-    <TextView
-        android:layout_marginTop="120dp"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ตั้งกระทู้ของคุณ"
+        android:id="@+id/postbutton"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
         android:background="#FF5252"
-        android:id="@+id/textView4"
-        android:text="กระทู้ที่ 1"
-        android:textColor="#FFF"
-        android:textSize="20dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="#FF5252"
-        android:layout_below="@+id/textView4"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp"
-        android:id="@+id/textView5"
-        android:text="กระทู้ที่ 2"
-        android:textColor="#FFF"
-        android:textSize="20dp"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="#FF5252"
-        android:layout_below="@+id/textView5"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp"
-        android:id="@+id/textView6"
-        android:text="กระทู้ที่ 3"
-        android:textColor="#FFF"
-        android:textSize="20dp"/>
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="#FF5252"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp"
-        android:id="@+id/textView7"
-        android:text="กระทู้ที่ 4"
-        android:textColor="#FFF"
-        android:textSize="20dp"
-        />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@+id/postbutton"
+        android:layout_alignRight="@+id/postbutton"
+        android:layout_alignEnd="@+id/postbutton"
+        android:layout_marginRight="250dp"
+        android:layout_marginEnd="250dp" />
 </RelativeLayout>
