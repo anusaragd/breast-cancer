@@ -25,12 +25,12 @@
         android:layout_alignParentEnd="true" />
 
     <ListView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/listView"
-        android:layout_below="@+id/postbutton"
-        android:layout_alignRight="@+id/postbutton"
-        android:layout_alignEnd="@+id/postbutton"
-        android:layout_marginRight="250dp"
-        android:layout_marginEnd="250dp" />
+        android:layout_below="@+id/postbutton">
+
+        </ListView>
+
+
 </RelativeLayout>

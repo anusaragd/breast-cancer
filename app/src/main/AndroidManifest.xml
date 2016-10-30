@@ -43,12 +43,13 @@
             android:parentActivityName=".About.ItemaboutListActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".alert.AlertActivity" />
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         <activity android:name=".Posts.postsActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
     </activity>
 
@@ -58,7 +59,9 @@
         <activity android:name=".alert.alert1Activity" />
         <activity android:name=".Touch.touchActivity" />
         <activity android:name=".Test.testActivity" />
-        <activity android:name=".alert.AlertsetActivity" />
+        <activity android:name=".alert.AlertsetActivity" >
+
+        </activity>
         <activity android:name=".Test.test1Activity" >
 
 

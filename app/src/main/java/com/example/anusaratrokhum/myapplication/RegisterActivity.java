@@ -39,26 +39,26 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
 
-
-        daySpinner = (Spinner) findViewById(R.id.date);
-        monthSpinner = (Spinner) findViewById(R.id.month);
-        yearSpinner = (Spinner) findViewById(R.id.year);
-
-
-        String[] day = getResources().getStringArray(R.array.day);
-        ArrayAdapter<String> adapterEnglish = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, day);
-        daySpinner.setAdapter(adapterEnglish);
-
-        String[] month = getResources().getStringArray(R.array.month);
-        ArrayAdapter<String> adaptermonth = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, month);
-        monthSpinner.setAdapter(adaptermonth);
-
-        String[] englishClub = getResources().getStringArray(R.array.year);
-        ArrayAdapter<String> adapteryear = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, englishClub);
-        yearSpinner.setAdapter(adapteryear);
+//
+//        daySpinner = (Spinner) findViewById(R.id.date);
+//        monthSpinner = (Spinner) findViewById(R.id.month);
+//        yearSpinner = (Spinner) findViewById(R.id.year);
+//
+//
+//        String[] day = getResources().getStringArray(R.array.day);
+//        ArrayAdapter<String> adapterEnglish = new ArrayAdapter<String>(this,
+//                android.R.layout.simple_dropdown_item_1line, day);
+//        daySpinner.setAdapter(adapterEnglish);
+//
+//        String[] month = getResources().getStringArray(R.array.month);
+//        ArrayAdapter<String> adaptermonth = new ArrayAdapter<String>(this,
+//                android.R.layout.simple_dropdown_item_1line, month);
+//        monthSpinner.setAdapter(adaptermonth);
+//
+//        String[] englishClub = getResources().getStringArray(R.array.year);
+//        ArrayAdapter<String> adapteryear = new ArrayAdapter<String>(this,
+//                android.R.layout.simple_dropdown_item_1line, englishClub);
+//        yearSpinner.setAdapter(adapteryear);
 
 //        final Button submit = (Button) findViewById(R.id.subbutt);
 //        submit.setOnClickListener(new View.OnClickListener() {
@@ -260,6 +260,7 @@ public class RegisterActivity extends AppCompatActivity {
 //        }
 //        return str.toString();
 //    }
+
 
 
 

@@ -9,8 +9,39 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.anusaratrokhum.myapplication.alert.alert1Activity">
 
-    TextView tv = (TextView) findViewById(R.id.tv_answer);
-    Bundle bundle = getIntent().getExtras();
-    if(bundle != null){
-    tv.setText(bundle.getString("MESSAGE"));
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_margin="10dp"
+        android:textColor="#000000"
+        android:text="Take medicine"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:text="Remide you to take medicine"
+        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignStart="@+id/textView1" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Stop Sound"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp" />
+
 </RelativeLayout>
