@@ -23,7 +23,7 @@
     <EditText
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:id="@+id/editText3"
+        android:id="@+id/edt_name"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/editText4"
+        android:id="@+id/edt_contents"
         android:layout_marginTop="28dp"
         android:layout_below="@+id/textView10"
         android:layout_alignParentLeft="true"
@@ -58,8 +58,8 @@
         android:layout_height="50dp"
         android:textSize="15dp"
         android:text="Post"
-        android:id="@+id/button"
-        android:layout_below="@+id/editText4"
+        android:id="@+id/btn_insert"
+        android:layout_below="@+id/edt_contents"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp" />
 
@@ -69,7 +69,7 @@
         android:textSize="15dp"
         android:text="Cancel"
         android:id="@+id/button2"
-        android:layout_alignBottom="@+id/button"
+        android:layout_alignBottom="@+id/btn_insert"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
