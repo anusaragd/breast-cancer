@@ -5,6 +5,7 @@ import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +23,7 @@ public class testsumActivity extends AppCompatActivity {
 
     TextView textShow, txtResult;
     int sum1,sum2,sum3,sum4,sum5,sum6; //คำตอบ
-
+    Button savebut, agianbut;
     String para;
 
 
@@ -44,6 +45,30 @@ public class testsumActivity extends AppCompatActivity {
         Datasum();
 
         txtResult = (TextView) findViewById(R.id.txtResult);
+
+        savebut = (Button) findViewById(R.id.savebutton);
+        savebut.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (v.getId() == R.id.savebutton) {
+                    Intent intent = new Intent(getApplicationContext(), test2Activity.class);
+                    startActivity(intent);
+
+                }
+
+            }
+        });
+        agianbut = (Button) findViewById(R.id.agianbutton);
+        agianbut.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (v.getId() == R.id.agianbutton) {
+                    Intent intent = new Intent(getApplicationContext(), testActivity.class);
+                    intent.putExtra("sum1", sum1);
+                    startActivity(intent);
+
+                }
+
+            }
+        });
 
         // Permission StrictMode
         if (android.os.Build.VERSION.SDK_INT > 9) {

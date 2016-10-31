@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:text="Save"
         android:background="#FF5252"
-        android:id="@+id/button4"
+        android:id="@+id/savebutton"
         android:textColor="#FFFFFF"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -59,7 +59,7 @@
         android:text="Agian"
         android:background="#FF5252"
         android:textColor="#FFFFFF"
-        android:id="@+id/button5"
+        android:id="@+id/agianbutton"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
