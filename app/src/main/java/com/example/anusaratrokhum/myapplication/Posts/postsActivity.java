@@ -6,10 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.example.anusaratrokhum.myapplication.R;
@@ -31,7 +31,9 @@ public class postsActivity extends AppCompatActivity implements View.OnClickList
     TextView txtResult;
     ListView listView;
 
-    ArrayList<String> list = new ArrayList<>();
+
+    ArrayList<String> listname = new ArrayList<>();
+    ArrayList<String> listcontent = new ArrayList<>();
     ArrayAdapter<String> adapter;
 
 
@@ -40,13 +42,33 @@ public class postsActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_posts);
 
+
+
         txtResult = (TextView) findViewById(R.id.txtResult);
         listView = (ListView) findViewById(R.id.listView);
         btn1 = (Button) findViewById(R.id.postbutton);
         btn1.setOnClickListener(this);
          adapter = new ArrayAdapter<String>( this,
-                android.R.layout.simple_list_item_1, list);
+                android.R.layout.simple_list_item_1, listname);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent = new Intent(postsActivity.this,posts2Activity.class);
+                intent.putExtra("name", listname.get(position));
+                intent.putExtra("content", listcontent.get(position));
+//based on item add info to intent
+                startActivity(intent);
+            }
+
+
+
+
+        });
 
         getList();
 
@@ -72,13 +94,14 @@ public class postsActivity extends AppCompatActivity implements View.OnClickList
             protected void onPostExecute(String string) {
                 super.onPostExecute(string);
                 try {
-                    list.clear();
+                    listname.clear();
 
                     JSONArray jsonArray = new JSONArray(string);
 
                     for(int i=0; i<jsonArray.length(); i++){
                         JSONObject json_data = jsonArray.getJSONObject(i);
-                        list.add(i, json_data.getString("p_name"));
+                        listname.add(i, json_data.getString("p_name"));
+                        listcontent.add(i, json_data.getString("p_content"));
                         Log.e( "json_data: ", json_data.getString("p_name"));
 
 
@@ -100,6 +123,7 @@ public class postsActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.postbutton:
                 Intent intent = new Intent(postsActivity.this, posts1Activity.class);
+
                 startActivityForResult(intent, 1);
                 break;
             default:

@@ -28,11 +28,14 @@ public class posts1Activity extends AppCompatActivity {
 
     EditText edt_name, edt_contents;
     Button btn_insert;
+    String user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_posts1);
+
+        user = getIntent().getStringExtra("username");
 
         edt_name = (EditText)findViewById(R.id.edt_name);
         edt_contents = (EditText)findViewById(R.id.edt_contents);
@@ -76,6 +79,7 @@ public class posts1Activity extends AppCompatActivity {
 
         RequestBody requestBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
+                .addFormDataPart("username", user)
                 .addFormDataPart("p_name", edt_name.getText().toString())
                 .addFormDataPart("p_content", edt_contents.getText().toString())
                 .build();

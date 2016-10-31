@@ -167,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
                         if (status.equals("1")) {
                             Toast.makeText(getApplicationContext(), "ยินดีต้อนรับ", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                            intent.putExtra("user",username.getText());
                             startActivity(intent);
 //                        Intent intentObj = new Intent(MainActivity.this,Main2Activity.class);
                         } else if (status.equals("0")) {

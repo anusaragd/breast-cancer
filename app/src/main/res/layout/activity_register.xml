@@ -77,24 +77,16 @@
         android:orientation="horizontal">
 
 
-        <Spinner android:layout_width="120dp"
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/date">
+            android:text="New Button"
+            android:id="@+id/button" />
 
-
-        </Spinner>
-        <Spinner android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/month">
-
-        </Spinner>
-        <Spinner android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/year">
-
-        </Spinner>
-
-
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 <LinearLayout
     android:layout_width="match_parent"
