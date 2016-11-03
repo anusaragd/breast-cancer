@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.anusaratrokhum.myapplication.HomeActivity;
 import com.example.anusaratrokhum.myapplication.R;
 
 import java.io.IOException;
@@ -50,7 +51,7 @@ public class testsumActivity extends AppCompatActivity {
         savebut.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (v.getId() == R.id.savebutton) {
-                    Intent intent = new Intent(getApplicationContext(), test2Activity.class);
+                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                     startActivity(intent);
 
                 }
@@ -74,7 +75,8 @@ public class testsumActivity extends AppCompatActivity {
         getHttp http = new getHttp();
         String response = null;
         try {
-            response = http.run("http://192.168.1.2/breast-cancer/getString.php");
+//            response = http.run("http://192.168.1.2/breast-cancer/getString.php");
+            response = http.run("http://192.168.43.180/breast-cancer/getString.php");
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

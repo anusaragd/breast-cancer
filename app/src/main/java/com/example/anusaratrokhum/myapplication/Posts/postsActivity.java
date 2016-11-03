@@ -30,6 +30,7 @@ public class postsActivity extends AppCompatActivity implements View.OnClickList
     Button btn1;
     TextView txtResult;
     ListView listView;
+    String user;
 
 
     ArrayList<String> listname = new ArrayList<>();
@@ -42,7 +43,7 @@ public class postsActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_posts);
 
-
+        user = getIntent().getStringExtra("username");
 
         txtResult = (TextView) findViewById(R.id.txtResult);
         listView = (ListView) findViewById(R.id.listView);
@@ -82,7 +83,8 @@ public class postsActivity extends AppCompatActivity implements View.OnClickList
                 getHttp http = new getHttp();
                 String response = null;
                 try {
-                    response = http.run("http://192.168.1.2/breast-cancer/post.php");
+//                    response = http.run("http://192.168.1.2/breast-cancer/post.php");
+                    response = http.run("http://192.168.43.180/breast-cancer/post.php");
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -123,7 +125,7 @@ public class postsActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.postbutton:
                 Intent intent = new Intent(postsActivity.this, posts1Activity.class);
-
+                intent.putExtra("username",user);
                 startActivityForResult(intent, 1);
                 break;
             default:

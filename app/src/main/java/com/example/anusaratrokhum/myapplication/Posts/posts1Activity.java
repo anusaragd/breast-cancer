@@ -49,7 +49,8 @@ public class posts1Activity extends AppCompatActivity {
                         getHttp http = new getHttp();
                         String response = null;
                         try {
-                            response = http.run("http://192.168.1.2/breast-cancer/insert2.php");
+                            response = http.run("http://192.168.43.180/breast-cancer/insert2.php");
+//                            response = http.run("http://192.168.1.2/breast-cancer/insert2.php");
                         } catch (IOException e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
@@ -79,7 +80,7 @@ public class posts1Activity extends AppCompatActivity {
 
         RequestBody requestBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
-                .addFormDataPart("username", user)
+//                .addFormDataPart("username", user)
                 .addFormDataPart("p_name", edt_name.getText().toString())
                 .addFormDataPart("p_content", edt_contents.getText().toString())
                 .build();

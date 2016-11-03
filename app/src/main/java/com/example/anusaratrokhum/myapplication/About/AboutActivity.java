@@ -1,4 +1,4 @@
-package com.example.anusaratrokhum.myapplication.Posts;
+package com.example.anusaratrokhum.myapplication.About;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -6,15 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
+import com.example.anusaratrokhum.myapplication.Posts.posts1Activity;
+import com.example.anusaratrokhum.myapplication.Posts.posts2Activity;
 import com.example.anusaratrokhum.myapplication.R;
-import com.example.anusaratrokhum.myapplication.Test.test2Activity;
-import com.example.anusaratrokhum.myapplication.commentActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,12 +25,8 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class posts2Activity extends AppCompatActivity {
+public class AboutActivity extends AppCompatActivity {
 
-    String name,content;
-    TextView text1,messege;
-    EditText addcomment;
-    Button add;
     ListView listView;
 
     ArrayList<String> listname = new ArrayList<>();
@@ -42,37 +36,31 @@ public class posts2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_posts2);
-
-        listView = (ListView) findViewById(R.id.listView2);
-        add = (Button)findViewById(R.id.addcomment);
-        add.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (v.getId() == R.id.addcomment) {
-                    Intent intent = new Intent(getApplicationContext(), commentActivity.class);
-                    startActivity(intent);
-
-                }
-
-            }
-        });
-
-        getList();
+        setContentView(R.layout.activity_about);
+        listView = (ListView) findViewById(R.id.listView3);
 
         adapter = new ArrayAdapter<String>( this,
                 android.R.layout.simple_list_item_1, listname);
         listView.setAdapter(adapter);
 
-        name = getIntent().getStringExtra("name");
-        content = getIntent().getStringExtra("content");
-
-        text1 = (TextView) findViewById(R.id.textView11);
-        text1.setText(name);
-
-        messege = (TextView) findViewById(R.id.messege);
-        messege.setText(content);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
 
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent = new Intent(AboutActivity.this,AnsAboutActivity.class);
+                intent.putExtra("name", listname.get(position));
+                intent.putExtra("content", listcontent.get(position));
+//based on item add info to intent
+                startActivity(intent);
+            }
+
+
+
+
+        });
+        getList();
     }
     private void getList() {
         new AsyncTask<Void, Void, String>() {
@@ -81,8 +69,8 @@ public class posts2Activity extends AppCompatActivity {
                 getHttp http = new getHttp();
                 String response = null;
                 try {
-                    response = http.run("http://192.168.43.180/breast-cancer/postcomment.php");
-//                    response = http.run("http://192.168.1.2/breast-cancer/postcomment.php");
+                    response = http.run("http://192.168.43.180/breast-cancer/postnews.php");
+//                    response = http.run("http://192.168.1.2/breast-cancer/postnews.php");
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -100,9 +88,9 @@ public class posts2Activity extends AppCompatActivity {
 
                     for(int i=0; i<jsonArray.length(); i++){
                         JSONObject json_data = jsonArray.getJSONObject(i);
-                        listname.add(i, json_data.getString("c_message"));
-                        listcontent.add(i, json_data.getString("p_content"));
-                        Log.e( "json_data: ", json_data.getString("c_message"));
+                        listname.add(i, json_data.getString("n_name"));
+                        listcontent.add(i, json_data.getString("n_content"));
+                        Log.e( "json_data: ", json_data.getString("n_name"));
 
 
                     }
@@ -117,6 +105,9 @@ public class posts2Activity extends AppCompatActivity {
             }
         }.execute();
     }
+
+
+
     public class getHttp {
         OkHttpClient client = new OkHttpClient();
         String run(String url) throws IOException {
