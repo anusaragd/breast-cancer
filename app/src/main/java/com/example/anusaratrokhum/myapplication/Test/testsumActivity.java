@@ -76,7 +76,8 @@ public class testsumActivity extends AppCompatActivity {
         String response = null;
         try {
 //            response = http.run("http://192.168.1.2/breast-cancer/getString.php");
-            response = http.run("http://192.168.43.180/breast-cancer/getString.php");
+//            response = http.run("http://192.168.43.180/breast-cancer/getString.php");
+            response = http.run("http://192.168.1.37/breast-cancer/getString.php");
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

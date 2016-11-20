@@ -8,10 +8,12 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.anusaratrokhum.myapplication.About.AboutActivity;
+import com.example.anusaratrokhum.myapplication.DataManager.DataAccountManager;
 import com.example.anusaratrokhum.myapplication.Posts.postsActivity;
 import com.example.anusaratrokhum.myapplication.Questionnaire.QuestionnaireActivity;
 import com.example.anusaratrokhum.myapplication.Test.testActivity;
@@ -30,8 +32,9 @@ public class HomeActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        user = getIntent().getStringExtra("username");
-
+//        user = getIntent().getStringExtra("username");
+        user = getIntent().getStringExtra("user");
+        Log.e( "HomeActivity: ", user + "");
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -95,6 +98,8 @@ public class HomeActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.questionnaire) {
             Intent intent = new Intent(getApplicationContext(), QuestionnaireActivity.class);
+//            intent.putExtra("user",username.getText());
+            intent.putExtra("username",user);
             startActivity(intent);
 
         } else if (id == R.id.test) {

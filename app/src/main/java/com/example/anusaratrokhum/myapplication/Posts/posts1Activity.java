@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.anusaratrokhum.myapplication.DataManager.DataAccountManager;
 import com.example.anusaratrokhum.myapplication.R;
 
 import org.json.JSONArray;
@@ -28,14 +29,16 @@ public class posts1Activity extends AppCompatActivity {
 
     EditText edt_name, edt_contents;
     Button btn_insert;
-    String user;
+    String user ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_posts1);
 
-        user = getIntent().getStringExtra("username");
+        user = DataAccountManager.getInstance().getUsername();
+//        Log.e( "Userrrrrrrrrrrrrrrrr: ","_________________________" );
+//        Log.e( "Userrrrrrrrrrrrrrrrr: ",user + "" );
 
         edt_name = (EditText)findViewById(R.id.edt_name);
         edt_contents = (EditText)findViewById(R.id.edt_contents);
@@ -43,14 +46,18 @@ public class posts1Activity extends AppCompatActivity {
         btn_insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(posts1Activity.this, postsActivity.class);
+                startActivity(intent);
                 new AsyncTask<Void, Void, String>() {
                     @Override
                     protected String doInBackground(Void... voids) {
                         getHttp http = new getHttp();
                         String response = null;
                         try {
-                            response = http.run("http://192.168.43.180/breast-cancer/insert2.php");
+//                            response = http.run("http://192.168.43.180/breast-cancer/insert2.php");
 //                            response = http.run("http://192.168.1.2/breast-cancer/insert2.php");
+                            response = http.run("http://192.168.1.37/breast-cancer/insert2.php");
+//                            response = http.run("http://172.19.237.81/breast-cancer/insert2.php");
                         } catch (IOException e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
@@ -71,7 +78,6 @@ public class posts1Activity extends AppCompatActivity {
             }
         });
 
-
     }
 
 
@@ -80,7 +86,7 @@ public class posts1Activity extends AppCompatActivity {
 
         RequestBody requestBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
-//                .addFormDataPart("username", user)
+                .addFormDataPart("username", user)
                 .addFormDataPart("p_name", edt_name.getText().toString())
                 .addFormDataPart("p_content", edt_contents.getText().toString())
                 .build();
