@@ -63,13 +63,14 @@ public class RegisterActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//                startActivity(intent);
                 if (checkFields()) {
-                    saveData();
-//                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//                    startActivity(intent);
+//                    saveData();
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
                 }
+                saveData();
             }
         });
         final Button cancel = (Button) findViewById(R.id.canbutt);
@@ -209,7 +210,7 @@ public class RegisterActivity extends AppCompatActivity {
                 getHttp http = new getHttp();
                 String response = null;
                 try {
-                    response = http.run("http://localhost/breast-cancer/register2.php");
+                    response = http.run("http://192.168.1.37/breast-cancer/register2.php");
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -240,20 +241,16 @@ public class RegisterActivity extends AppCompatActivity {
 
     public class getHttp {
         OkHttpClient client = new OkHttpClient();
-        RequestBody requestBody = new MultipartBody.Builder()
-                .setType(MultipartBody.FORM)
-                .addFormDataPart("username", "sss")
-                .addFormDataPart("password", "sss")
-                .addFormDataPart("email", "sss")
-                .addFormDataPart("name", "sss")
-                .addFormDataPart("lastname", "sss")
-                .build();
-        /*.addFormDataPart("username", txtUsername.getText().toString())
+      RequestBody requestBody = new MultipartBody.Builder()
+            .setType(MultipartBody.FORM)
+            .addFormDataPart("username", txtUsername.getText().toString())
                 .addFormDataPart("password", txtPassword.getText().toString())
                 .addFormDataPart("email", txtEmail.getText().toString())
                 .addFormDataPart("name", txtName.getText().toString())
                 .addFormDataPart("lastname", txtlastName.getText().toString())
-                .build();*/
+                .addFormDataPart("birthday",cal.getTime().toString())
+//                .addFormDataPart("birthday",et.getText().toString())
+                .build();
         String run(String url) throws IOException {
             Request request = new Request.Builder()
                     .post(requestBody)

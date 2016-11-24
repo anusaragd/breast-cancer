@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.anusaratrokhum.myapplication.DataManager.DataAccountManager;
 import com.example.anusaratrokhum.myapplication.Posts.postsActivity;
 import com.example.anusaratrokhum.myapplication.Test.testActivity;
 
@@ -24,11 +25,15 @@ public class commentActivity extends AppCompatActivity {
 
     EditText comment;
     Button submit,cancel;
+    String user ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comment);
+
+        user = DataAccountManager.getInstance().getUsername();
         comment = (EditText)findViewById(R.id.comment);
         submit = (Button)findViewById(R.id.button8);
         submit.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +89,7 @@ public class commentActivity extends AppCompatActivity {
 
         RequestBody requestBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
+                .addFormDataPart("username", user)
                 .addFormDataPart("c_message", comment.getText().toString())
                 .build();
 

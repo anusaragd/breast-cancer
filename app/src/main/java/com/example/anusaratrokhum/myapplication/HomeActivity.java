@@ -98,7 +98,6 @@ public class HomeActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.questionnaire) {
             Intent intent = new Intent(getApplicationContext(), QuestionnaireActivity.class);
-//            intent.putExtra("user",username.getText());
             intent.putExtra("username",user);
             startActivity(intent);
 

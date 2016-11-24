@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.anusaratrokhum.myapplication.DataManager.DataAccountManager;
 import com.example.anusaratrokhum.myapplication.R;
 import com.example.anusaratrokhum.myapplication.Test.test2Activity;
 import com.example.anusaratrokhum.myapplication.commentActivity;
@@ -31,9 +32,9 @@ public class posts2Activity extends AppCompatActivity {
 
     String name,content;
     TextView text1,messege;
-    EditText addcomment;
     Button add;
     ListView listView;
+    String user;
 
     ArrayList<String> listname = new ArrayList<>();
     ArrayList<String> listcontent = new ArrayList<>();
@@ -44,12 +45,16 @@ public class posts2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_posts2);
 
+        user = getIntent().getStringExtra("user");
+        Log.e( "HomeActivity: ", user + "");
+
         listView = (ListView) findViewById(R.id.listView2);
         add = (Button)findViewById(R.id.addcomment);
         add.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (v.getId() == R.id.addcomment) {
                     Intent intent = new Intent(getApplicationContext(), commentActivity.class);
+                    intent.putExtra("username",user);
                     startActivity(intent);
 
                 }
