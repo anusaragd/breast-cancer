@@ -125,7 +125,7 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(intent);
 
             } else if (id == R.id.help) {
-                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                Intent intent = new Intent(getApplicationContext(), HelpActivity.class);
                 startActivity(intent);
 
             } else if (id == R.id.nav_send) {
