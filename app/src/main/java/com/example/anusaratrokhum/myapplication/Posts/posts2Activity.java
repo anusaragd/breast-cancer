@@ -30,7 +30,7 @@ import okhttp3.Response;
 
 public class posts2Activity extends AppCompatActivity {
 
-    String name,content;
+    String id,name,content;
     TextView text1,messege;
     Button add;
     ListView listView;
@@ -45,8 +45,10 @@ public class posts2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_posts2);
 
-        user = getIntent().getStringExtra("user");
-        Log.e( "HomeActivity: ", user + "");
+
+        id = getIntent().getStringExtra("p_id");
+
+        user = DataAccountManager.getInstance().getUsername();
 
         listView = (ListView) findViewById(R.id.listView2);
         add = (Button)findViewById(R.id.addcomment);
@@ -54,6 +56,7 @@ public class posts2Activity extends AppCompatActivity {
             public void onClick(View v) {
                 if (v.getId() == R.id.addcomment) {
                     Intent intent = new Intent(getApplicationContext(), commentActivity.class);
+                    intent.putExtra("p_id",id);
                     intent.putExtra("username",user);
                     startActivity(intent);
 

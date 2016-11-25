@@ -248,8 +248,8 @@ public class RegisterActivity extends AppCompatActivity {
                 .addFormDataPart("email", txtEmail.getText().toString())
                 .addFormDataPart("name", txtName.getText().toString())
                 .addFormDataPart("lastname", txtlastName.getText().toString())
-                .addFormDataPart("birthday",cal.getTime().toString())
-//                .addFormDataPart("birthday",et.getText().toString())
+//                .addFormDataPart("birthday",cal.getTime().toString())
+                .addFormDataPart("birthday",et.getText().toString())
                 .build();
         String run(String url) throws IOException {
             Request request = new Request.Builder()
