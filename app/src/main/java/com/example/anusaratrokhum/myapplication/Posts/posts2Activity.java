@@ -46,7 +46,7 @@ public class posts2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_posts2);
 
 
-        id = getIntent().getStringExtra("p_id");
+//        id = getIntent().getStringExtra("p_id");
 
         user = DataAccountManager.getInstance().getUsername();
 
@@ -56,7 +56,7 @@ public class posts2Activity extends AppCompatActivity {
             public void onClick(View v) {
                 if (v.getId() == R.id.addcomment) {
                     Intent intent = new Intent(getApplicationContext(), commentActivity.class);
-                    intent.putExtra("p_id",id);
+//                    intent.putExtra("p_id",id);
                     intent.putExtra("username",user);
                     startActivity(intent);
 

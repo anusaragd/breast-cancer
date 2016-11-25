@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.anusaratrokhum.myapplication.DataManager.DataAccountManager;
+import com.example.anusaratrokhum.myapplication.Posts.posts2Activity;
 import com.example.anusaratrokhum.myapplication.Posts.postsActivity;
 import com.example.anusaratrokhum.myapplication.Test.testActivity;
 
@@ -22,10 +23,10 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class commentActivity extends AppCompatActivity {
-
     EditText comment;
-    Button submit,cancel;
+    Button sub,can ;
     String user ;
+
 
 
     @Override
@@ -34,74 +35,19 @@ public class commentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_comment);
 
         user = DataAccountManager.getInstance().getUsername();
+
         comment = (EditText)findViewById(R.id.comment);
-        submit = (Button)findViewById(R.id.button8);
-        submit.setOnClickListener(new View.OnClickListener() {
+        sub = (Button)findViewById(R.id.button8);
+        sub.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
-                new AsyncTask<Void, Void, String>() {
-                    @Override
-                    protected String doInBackground(Void... voids) {
-                        getHttp http = new getHttp();
-                        String response = null;
-                        try {
-//                            response = http.run("http://192.168.1.2/breast-cancer/insertcomment.php");
-                            response = http.run("http://192.168.1.37/breast-cancer/insertcomment.php");
-//                            response = http.run("http://192.168.43.180/breast-cancer/insertcomment.php");
-                        } catch (IOException e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                        }
-                        return response;
-                    }
-
-                    @Override
-                    protected void onPostExecute(String string) {
-                        super.onPostExecute(string);
-
-                        Log.e( "onPostExecute: ", string);
-                    }
-                }.execute();
-
-
-
+            public void onClick(View v){
+                Intent intent = new Intent(commentActivity.this, posts2Activity.class);
+                startActivity(intent);
             }
-        });
 
-        cancel = (Button) findViewById(R.id.canbelb);
-        cancel.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (v.getId() == R.id.agianbutton) {
-                    Intent intent = new Intent(getApplicationContext(), postsActivity.class);
-                    startActivity(intent);
+        }) ;
 
-                }
-
-            }
-        });
 
 
     }
-
-
-    public class getHttp {
-        OkHttpClient client = new OkHttpClient();
-
-        RequestBody requestBody = new MultipartBody.Builder()
-                .setType(MultipartBody.FORM)
-                .addFormDataPart("username", user)
-                .addFormDataPart("c_message", comment.getText().toString())
-                .build();
-
-        String run(String url) throws IOException {
-            Request request = new Request.Builder()
-                    .post(requestBody)
-                    .url(url)
-                    .build();
-            Response response = client.newCall(request).execute();
-            return response.body().string();
-        }
-    }
-
 }
-

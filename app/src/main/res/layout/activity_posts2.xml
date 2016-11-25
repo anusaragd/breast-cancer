@@ -27,7 +27,7 @@
             android:background="@drawable/custom_post">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:textSize="30dp"
                 android:text="ชื่อกระทู้"
@@ -40,7 +40,7 @@
                 android:layout_marginLeft="10dp"/>
 
             <TextView
-                android:layout_width="68dp"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:text="เนื้อหา"

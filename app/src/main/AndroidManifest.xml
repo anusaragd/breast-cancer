@@ -59,7 +59,8 @@
         <activity android:name=".Questionnaire.QuestionnaireActivity" />
         <activity android:name=".Questionnaire.AnswerQuestionnaireActivity" />
         <activity android:name=".About.AboutActivity" />
-        <activity android:name=".About.AnsAboutActivity"></activity>
+        <activity android:name=".About.AnsAboutActivity" />
+        <activity android:name=".HelpActivity"></activity>
     </application>
 
 </manifest>
