@@ -60,10 +60,12 @@ public class postsActivity extends AppCompatActivity implements View.OnClickList
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent intent = new Intent(postsActivity.this,posts2Activity.class);
+                intent.putExtra("username",user);
                 intent.putExtra("name", listname.get(position));
                 intent.putExtra("content", listcontent.get(position));
+                startActivityForResult(intent, 1);
 //based on item add info to intent
-                startActivity(intent);
+//                startActivity(intent);
             }
 
 

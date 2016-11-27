@@ -47,6 +47,7 @@ public class posts1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(posts1Activity.this, postsActivity.class);
+
                 startActivity(intent);
                 new AsyncTask<Void, Void, String>() {
                     @Override

@@ -19,6 +19,7 @@ import com.example.anusaratrokhum.myapplication.Questionnaire.QuestionnaireActiv
 import com.example.anusaratrokhum.myapplication.Test.testActivity;
 import com.example.anusaratrokhum.myapplication.Touch.touchActivity;
 import com.example.anusaratrokhum.myapplication.alert.AlertActivity;
+import com.example.anusaratrokhum.myapplication.alert.AlertsetActivity;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -107,7 +108,7 @@ public class HomeActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.alarm) {
-            Intent intent = new Intent(getApplicationContext(), AlertActivity.class);
+            Intent intent = new Intent(getApplicationContext(), AlertsetActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.gps) {

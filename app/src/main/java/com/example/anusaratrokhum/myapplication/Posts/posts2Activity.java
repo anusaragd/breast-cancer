@@ -30,8 +30,8 @@ import okhttp3.Response;
 
 public class posts2Activity extends AppCompatActivity {
 
-    String id,name,content;
-    TextView text1,messege;
+    String id,name,content,date;
+    TextView text1,messege,dateshow;
     Button add;
     ListView listView;
     String user;
@@ -73,12 +73,18 @@ public class posts2Activity extends AppCompatActivity {
 
         name = getIntent().getStringExtra("name");
         content = getIntent().getStringExtra("content");
+        date = getIntent().getStringExtra("date");
 
         text1 = (TextView) findViewById(R.id.textView11);
         text1.setText(name);
 
         messege = (TextView) findViewById(R.id.messege);
         messege.setText(content);
+
+        dateshow = (TextView) findViewById(R.id.textView6);
+        dateshow.setText(date);
+
+
 
 
     }
@@ -111,7 +117,7 @@ public class posts2Activity extends AppCompatActivity {
                     for(int i=0; i<jsonArray.length(); i++){
                         JSONObject json_data = jsonArray.getJSONObject(i);
                         listname.add(i, json_data.getString("c_message"));
-                        listcontent.add(i, json_data.getString("p_content"));
+                        listcontent.add(i, json_data.getString("c_message"));
                         Log.e( "json_data: ", json_data.getString("c_message"));
 
 

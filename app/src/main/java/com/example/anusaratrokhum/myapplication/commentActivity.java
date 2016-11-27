@@ -43,11 +43,56 @@ public class commentActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent = new Intent(commentActivity.this, posts2Activity.class);
                 startActivity(intent);
+
+                new AsyncTask<Void, Void, String>() {
+                    @Override
+                    protected String doInBackground(Void... voids) {
+                        getHttp http = new getHttp();
+                        String response = null;
+                        try {
+//                            response = http.run("http://192.168.43.180/breast-cancer/insert2.php");
+//                            response = http.run("http://192.168.1.2/breast-cancer/insert2.php");
+                            response = http.run("http://192.168.1.37/breast-cancer/insertcomment.php");
+//                            response = http.run("http://172.19.237.81/breast-cancer/insert2.php");
+                        } catch (IOException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                        return response;
+                    }
+
+                    @Override
+                    protected void onPostExecute(String string) {
+                        super.onPostExecute(string);
+
+                        Log.e( "onPostExecute: ", string);
+                    }
+                }.execute();
+
+
+
             }
+
 
         }) ;
 
+    }
+    public class getHttp {
+        OkHttpClient client = new OkHttpClient();
 
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("username", user)
+                .addFormDataPart("c_message", comment.getText().toString())
+                .build();
 
+        String run(String url) throws IOException {
+            Request request = new Request.Builder()
+                    .post(requestBody)
+                    .url(url)
+                    .build();
+            Response response = client.newCall(request).execute();
+            return response.body().string();
+        }
     }
 }
