@@ -69,8 +69,9 @@ public class AboutActivity extends AppCompatActivity {
                 getHttp http = new getHttp();
                 String response = null;
                 try {
-                    response = http.run("http://192.168.43.180/breast-cancer/postnews.php");
+//                    response = http.run("http://192.168.43.180/breast-cancer/postnews.php");
 //                    response = http.run("http://192.168.1.2/breast-cancer/postnews.php");
+                    response = http.run("http://192.168.1.37/breast-cancer/postnews.php");
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();

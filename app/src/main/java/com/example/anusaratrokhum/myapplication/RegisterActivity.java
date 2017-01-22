@@ -210,6 +210,7 @@ public class RegisterActivity extends AppCompatActivity {
                 getHttp http = new getHttp();
                 String response = null;
                 try {
+//                    response = http.run("http://192.168.43.180/breast-cancer/register2.php");
                     response = http.run("http://192.168.1.37/breast-cancer/register2.php");
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
